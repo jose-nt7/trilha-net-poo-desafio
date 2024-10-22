@@ -1,14 +1,21 @@
+using System;
+
 namespace DesafioPOO.Models
 {
     public abstract class Smartphone
     {
         public string Numero { get; set; }
-        // TODO: Implementar as propriedades faltantes de acordo com o diagrama
+        public string Modelo { get; set; }
+        public string Marca { get; set; }
+        public int Ano { get; set; }
 
-        public Smartphone(string numero)
+        
+        public Smartphone(string numero, string modelo, string marca, int ano)
         {
             Numero = numero;
-            // TODO: Passar os parâmetros do construtor para as propriedades
+            Modelo = modelo;
+            Marca = marca;
+            Ano = ano;
         }
 
         public void Ligar()
@@ -21,6 +28,15 @@ namespace DesafioPOO.Models
             Console.WriteLine("Recebendo ligação...");
         }
 
-        public abstract void InstalarAplicativo(string nomeApp);
+        
+        public abstract void InstalarAplicativo(string WhatsApp);
+        public void MostrarDados()
+        {
+            Console.WriteLine($"Modelo: {Modelo}");
+            Console.WriteLine($"Número: {Numero}");
+            Console.WriteLine($"Marca: {Marca}");
+            Console.WriteLine($"Ano: {Ano}");
+        }
+
     }
 }
