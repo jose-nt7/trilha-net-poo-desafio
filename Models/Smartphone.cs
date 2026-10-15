@@ -9,7 +9,6 @@ namespace DesafioPOO.Models
         public string Marca { get; set; }
         public int Ano { get; set; }
 
-        
         public Smartphone(string numero, string modelo, string marca, int ano)
         {
             Numero = numero;
@@ -28,8 +27,8 @@ namespace DesafioPOO.Models
             Console.WriteLine("Recebendo ligação...");
         }
 
-        
-        public abstract void InstalarAplicativo(string WhatsApp);
+        public abstract void InstalarAplicativo(string nomeApp);
+
         public void MostrarDados()
         {
             Console.WriteLine($"Modelo: {Modelo}");
@@ -37,6 +36,5 @@ namespace DesafioPOO.Models
             Console.WriteLine($"Marca: {Marca}");
             Console.WriteLine($"Ano: {Ano}");
         }
-
     }
 }
